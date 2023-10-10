@@ -74,8 +74,8 @@ def generate_merge_query(target_table, source_table, feature_column):
     return merge_query
 
 # Usage
-target_table = "adnan_dlt_jd.all_features"
-source_table = "adnan_dlt_jd.feature_1"
+target_table = "adnan_dlt_jd_v2.all_features"
+source_table = "adnan_dlt_jd_v2.feature_2"
 
 query = generate_merge_query(target_table, source_table, "feature_1")
 

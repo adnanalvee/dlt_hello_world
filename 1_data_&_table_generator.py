@@ -4,7 +4,7 @@
 # COMMAND ----------
 
 catalog = "hive_metastore"
-database = "adnan_dlt_jd"
+database = "adnan_dlt_jd_v2"
 
 # COMMAND ----------
 
@@ -64,4 +64,4 @@ empty_df = spark.createDataFrame([], schema)
 
 hive_table_name = f"{database}.all_features"
 
-empty_df.write.format("delta").saveAsTable(f"{database}.all_features")
+empty_df.write.format("delta").mode("overwrite").saveAsTable(f"{database}.all_features")
