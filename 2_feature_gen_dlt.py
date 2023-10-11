@@ -22,6 +22,7 @@ def source():
 
 # COMMAND ----------
 
+@dlt.table
 def feature_gen_1(df):
     get_number = add(1, 2)
     return df.select("id", (get_number * col("feat_col_1")).alias("feature_1"))
